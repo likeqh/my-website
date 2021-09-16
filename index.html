@@ -1,68 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Web site created using CloudBase Webify">
-    <title>Hello Webify！</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-                sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        code {
-            font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-                monospace;
-        }
-        .App {
-            text-align: center;
-        }
-
-        .App-logo {
-            height: 40vmin;
-            pointer-events: none;
-        }
-
-        @media (prefers-reduced-motion: no-preference) {
-            .App-logo {
-                animation: App-logo-spin infinite 20s linear;
-            }
-        }
-
-        .App-header {
-            background-color: #efefef;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: calc(10px + 2vmin);
-            color: black;
-        }
-
-        .App-link {
-            color: #108ee9;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <title>css网页布局</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
-    <div id="root">
-        <div class="App">
-            <header class="App-header">
-                <img src="https://main.qcloudimg.com/raw/2f3b21706c37e8685efe5c60b26ceb24.png" class="App-logo" alt="logo">
-                <p>Welcome to Webify！</p>
-                <a class="App-link" href="https://webify.cloudbase.net/"
-                    target="_blank" rel="noopener noreferrer">webify.cloudbase.net</a>
-            </header>
+<!--整体到部分，左到右，上到下-->
+    <!--头部-->
+    <div class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <div class="nav">
+            <ul>
+                <li>手记</li>
+                <li>视频</li>
+                <li>图片</li>
+                <li>首页</li>
+            </ul>
         </div>
     </div>
+    <!--主体-->
+    <div class="main">
+        <div class="top">
+            <img src="img/1.jpeg" alt="topimg">
+        </div>
+        <!--遮罩层-->
+        <div class="topplayer"></div>
+        <!--最上层的内容-->
+        <div class="topplayer-top">
+            <div class="word">MY BEAUTIFUL LIFE</div>
+            <button>LOOK MORE &gt;</button>
+        </div>
+        <div class="middle">
+            <div class="m-top">
+                <div class="commen weibo">
+                    <img src="img/weibo.png" alt="weibologo">
+                    <div class="comm">MICROBLOG</div>
+                </div>
+                <div class="commen wechat">
+                    <img src="img/weixin.png" alt="weixinlogo">
+                    <div class="comm">WECHAT</div>
+                </div>
+                <div class="commen qq">
+                    <img src="img/QQ.png" alt="qqlogo">
+                    <div class="comm">QQ</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="m-middle">
+                "I want to give good things to record down,<br>after the recall will be very beautiful."
+            </div>
+            <div class="m-bottom">
+                <div class="m-com">
+                    <img src="img/03-01.jpg" alt="03-01.jpg">
+                    <div class="des1">Cool Image</div>
+                    <div class="des2">Record The Picture</div>
+                </div>
+                <div class="m-com">
+                    <img src="img/03-02.jpg" alt="03-02.jpg">
+                    <div class="des1">Great Picture</div>
+                    <div class="des2">Record The Picture</div>
+                </div>
+                <div class="m-com">
+                    <img src="img/03-03.jpg" alt="03-03.jpg">
+                    <div class="des1">Cool Image</div>
+                    <div class="des2">Record The Picture</div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="bottom">
+            <div class="b-title">FROM THE PHOTO ALBUM</div>
+            <div class="pic-content">
+                <dl>
+                    <dt><img src="img/04-01.jpg" alt="04-01"></dt>
+                    <dd class="word">
+                        Life is like a book, just read more and more refined, more write more carefully. When read, mind open, all things have been indifferent to heart. Life is the precipitation.
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/04-02.jpg" alt="04-01"></dt>
+                    <dd class="word">
+                        Life is like a book, just read more and more refined, more write more carefully. When read, mind open, all things have been indifferent to heart. Life is the precipitation.
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <!--底部-->
+    <div class="footer">
+        &copy 2016 imooc.com  京ICP备13046642号
+    </div>
 </body>
-
 </html>
